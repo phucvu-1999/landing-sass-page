@@ -50,6 +50,18 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary-dark;
+    padding: 2rem 6rem;
+    color: $color-true-white;
+    display: inline-block;
+    border-radius: 5rem;
+
+    &::after {
+      background-color: $color-primary-dark;
+    }
+  }
+
   &--animated {
     animation: moveUp 2s ease-in;
   }
