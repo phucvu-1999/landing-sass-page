@@ -1,0 +1,36 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin float-layout {
+  float: left;
+  color: #333;
+}
+
+@mixin skew-left {
+  transform: skewX(12deg) skewY(1.5deg) scale(1.2);
+  text-shadow: 0 0.2rem 0.3rem rgba($color-primary-dark, 0.2);
+}
+
+@mixin skew-right {
+  transform: skewX(-12deg) skewY(-1.5deg) scale(1.2);
+  text-shadow: 0 0.2rem 0.3rem rgba($color-primary-dark, 0.2);
+}
+
+@mixin composition-img-hover {
+  transform: scale(1.2);
+  z-index: 999;
+}
+
+@mixin background-image {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.4),
+      rgba($color-primary-dark, 0.4)
+    ),
+    url("../img/hero-small.jpg");
+}
