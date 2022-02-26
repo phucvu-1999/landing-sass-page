@@ -125,6 +125,9 @@ body {
 .u-margin-top-big {
   margin-top: 8rem; }
 
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -149,12 +152,28 @@ body {
   padding: 10rem 0;
   position: relative; }
 
-.btn:link, .btn:visited {
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+.book {
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../../img/nat-10.jpg");
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.6);
+  height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
+
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s ease-in;
   position: relative;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -404,6 +423,83 @@ body {
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%); }
 
+.form__input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-bottom: 3px solid transparent;
+  transition: all 1s ease;
+  display: block;
+  width: 90%;
+  margin-top: 1rem; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #7ed56f; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730; }
+
+.form__label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  display: block;
+  transition: all 0.3s linear;
+  color: #000; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 5rem; }
+
+.form__radio-button {
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #28b485;
+  border-radius: 50%;
+  display: inline-block; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28b485;
+    opacity: 0;
+    transition: all 0.2s; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.form__btn {
+  border: none; }
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -416,27 +512,6 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover; }
-
-.header {
-  position: relative;
-  height: 95vh;
-  background-blend-mode: hue;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url("../img/hero-small.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px; }
-  .header__logo {
-    height: 35px; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -495,6 +570,30 @@ body {
   font-size: 1.6rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 5rem; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-blend-mode: hue;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url("../img/hero-small.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .header__logo {
+    height: 35px; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.footer {
+  background-color: #000; }
 
 .row {
   max-width: 144rem;
