@@ -16,6 +16,11 @@
     text-align: center;
     cursor: pointer;
     transition: all 1s ease-out;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
   }
 
   &__background {
@@ -34,6 +39,10 @@
     cursor: pointer;
     transition: transform 1s ease-out;
     // transform: scale(100);
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
   }
 
   &__nav {
