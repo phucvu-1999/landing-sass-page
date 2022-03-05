@@ -7,6 +7,10 @@
   box-shadow: 0 0.15rem 4rem rgba($color-black, 0.7);
   transition: all 0.2s linear;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   &__icon {
     background-image: linear-gradient(
       to right,
@@ -17,6 +21,10 @@
     color: transparent;
     font-size: 6rem;
     margin-bottom: 0.5rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
   &__text {
